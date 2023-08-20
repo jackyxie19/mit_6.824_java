@@ -2,13 +2,13 @@ package worker.map;
 
 import base.data.OutputCollector;
 
-public class MapExecutor<K, V> implements Mapper{
-    private Mapper<K, V> mapper;
+public class MapExecutor<K, V> implements MapFunction {
+    private MapFunction<K, V> mapFunction;
     private String inputFilePath;
     private OutputCollector<K, V> collector;
 
-    public MapExecutor(Mapper<K, V> mapper, String inputFilePath, OutputCollector<K, V> collector) {
-        this.mapper = mapper;
+    public MapExecutor(MapFunction<K, V> mapFunction, String inputFilePath, OutputCollector<K, V> collector) {
+        this.mapFunction = mapFunction;
         this.inputFilePath = inputFilePath;
         this.collector = collector;
     }
