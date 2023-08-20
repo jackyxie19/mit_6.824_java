@@ -2,7 +2,11 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/map-reduce" />
+    <content url="file://$MODULE_DIR$/map-reduce">
+      <sourceFolder url="file://$MODULE_DIR$/map-reduce/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/map-reduce/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/map-reduce/src/test" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
