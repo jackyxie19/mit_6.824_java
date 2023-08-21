@@ -1,10 +1,10 @@
 package worker;
 
+import master.MapTask;
+import master.ReduceTask;
 import worker.map.MapFunction;
-import base.task.Task;
-import base.task.TaskType;
-import worker.map.MapTask;
-import worker.reduce.ReduceTask;
+import worker.map.MapExecuteTask;
+import worker.reduce.ReduceExecuteTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,40 +12,53 @@ import java.util.List;
 /**
  * 1.Map和Reduce任务队列分离，Map和Reduce任务触发的时机、执行方式、执行节点与Map任务关联性不大，考虑将两者分离。
  * 2.Map任务队列和Reduce任务队列等有读有些的共享存储需要考虑线程安全问题。
- *
+ * 3.Worker对外应该值暴露任务submit、kill、status等基础接口，真实的作业执行不应为外部感知。
  */
 public class Worker {
     private String nodeId;
-    private final List<Task> tasks = new ArrayList<>();
-    private final List<Task> mapTask = new ArrayList<>();
-    private final List<Task> reduceTask = new ArrayList<>();
+    private final List<MapExecuteTask> mapExecuteTask = new ArrayList<>();
+    private final List<ReduceExecuteTask> reduceExecuteTask = new ArrayList<>();
 
 
-    public void addTask(Task task) {
-        tasks.add(task);
+    private void heartbeatWithTaskInfo(){
+
     }
 
-    public void executeTasks() {
-        for (Task task : tasks) {
-            if (task.getType() == TaskType.MAP) {
-                // 执行Map任务
-                MapTask mapTask = (MapTask) task;
-//                executeMap(mapTask);
-            } else if (task.getType() == TaskType.REDUCE) {
-                // 执行Reduce任务
-                ReduceTask reduceTask = (ReduceTask) task;
-                executeReduce(reduceTask);
-            }
-        }
+    private void executeMapTasks() {
+
     }
 
-    private void executeMap(MapTask mapTask, MapFunction mapFunction) {
+    private void executeMap(MapExecuteTask mapExecuteTask, MapFunction mapFunction) {
         // 执行Map任务的逻辑
 //        MapExecutor<String, String> mapExecutor = new MapExecutor<>(mapper, mapTask.getInputFilePath(), yourOutputCollector);
 //        mapExecutor.execute();
     }
 
-    private void executeReduce(ReduceTask reduceTask) {
+    private void executeReduce(ReduceExecuteTask reduceExecuteTask) {
         // 执行Reduce任务的逻辑
+    }
+
+    public void submitMapTask(MapTask mapTask){
+
+    }
+
+    public void submitReduceTask(ReduceTask reduceTask){
+
+    }
+
+    public void killMapTask(MapTask mapTask){
+
+    }
+
+    public void killReduceTask(ReduceTask reduceTask){
+
+    }
+
+    public void queryMapTaskStatus(MapTask mapTask){
+
+    }
+
+    public void queryReduceTaskStatus(ReduceTask reduceTask){
+
     }
 }

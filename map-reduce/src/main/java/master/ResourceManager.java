@@ -10,25 +10,29 @@ public class ResourceManager {
     /**
      * 随心跳更新状态
      */
-    void updateInfo(){
+    public void updateInfo(WorkerInfo workerInfo){
 
     }
 
     /**
      * 任务执行前申请Worker
      */
-    void applyResource(){
+    public void applyResource(Job job){
 
     }
 
     /**
      * JM主动申请归还，如kill事件
      */
-    void releaseResource(){
+    public void releaseResource(){
 
     }
 
     private void getTopNFreeWorker(){
+
+    }
+
+    private void assignWorker(){
 
     }
 }

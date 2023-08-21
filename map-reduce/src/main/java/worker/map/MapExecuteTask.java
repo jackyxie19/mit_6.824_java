@@ -2,7 +2,7 @@ package worker.map;
 
 import base.task.Task;
 
-public class MapTask extends Task {
+public class MapExecuteTask extends Task {
     private String inputFilePath;
 
 }

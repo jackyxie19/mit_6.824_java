@@ -2,7 +2,7 @@ package worker.reduce;
 
 import base.task.Task;
 
-public class ReduceTask extends Task {
+public class ReduceExecuteTask extends Task {
     private String intermediateFilesPath;
 
 }

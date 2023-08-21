@@ -78,7 +78,9 @@ TODO：
 
 # 流程图
 
-总流程
+## 总流程
+
+<img src="./images/MapReduce design/mr-main-v0.png" alt="mr-main-v0"  />
 
 客户端作业及任务提交
 
@@ -114,7 +116,7 @@ Worker reduce任务执行
 8. Map的输出结果如何存储？是所有的结果存在一个文件中？还是根据Reduce任务分配Worker节点进行分别存储？还是每一类Key存到一个文件中（分区函数）？
 9. shuffle是处理数据倾斜，没有shuffle阶段不影响程序执行结果的正确性。
 10. 什么时候决定哪个worker处理哪个Reduce任务/负责哪个中间Key？
-    1. 目标：如何在不同数据分布的时候，保证各个节点的工作负载相对均衡。
+   1. 目标：如何在不同数据分布的时候，保证各个节点的工作负载相对均衡。
 11. Map的中间结果是存放在内存中还是存放在磁盘当中？
 12. Map任务的结果如何通知Master？是定时反馈快照信息给Master，定时返回信息是随心跳返回还是单独返回？还是任务完成后通过回调通知master？
     1. 定时任务上报实现会相对简单。
@@ -127,3 +129,7 @@ Worker reduce任务执行
 17. 作业ID与任务ID如何设置，在不同的节点之间如何维护作业与任务之间的关系？
     1.  扩散到如何生成不重复的Id？
 18. Master数据结构该如何定义？
+    1. 任务状态的两个作用，一个是用于判断worker节点工作量，另一个是用于故障恢复等。
+19. Task分为MapTask和ReduceTask，Worker由谁来管理？
+    1. Worker不由TaskManager、JobManager任何一方来管理，Worker只负责接收任务、执行任务并将任务返回给请求者。而TaskManager只负责向Worker提交任务以及接收结果，JobManager是对所有提交的Job进行管理。
+       1. Worker有多重身份，没有一个唯一的上游。一个做为工作节点执行任务（职责关系），另一个是集群的组成部分（成员关系）。最直接对worker进行管理的应该是ResourceManager。

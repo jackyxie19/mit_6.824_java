@@ -1,7 +1,7 @@
 package master;
 
-import worker.map.MapTask;
-import worker.reduce.ReduceTask;
+import worker.map.MapExecuteTask;
+import worker.reduce.ReduceExecuteTask;
 import worker.Worker;
 
 import java.util.ArrayList;
@@ -16,28 +16,32 @@ import java.util.List;
 public class JobManager {
     private final List<Worker> workers = new ArrayList<>();
 
-    public void submitJob(List<MapTask> mapTasks, List<ReduceTask> reduceTasks) {
+    public void submitJob(List<MapExecuteTask> mapExecuteTasks, List<ReduceExecuteTask> reduceExecuteTasks) {
         // 根据Worker节点的资源情况，将任务分配给不同的Worker
-        distributeTasks(mapTasks, reduceTasks);
+        distributeTasks(mapExecuteTasks, reduceExecuteTasks);
 
         // 执行任务
-        executeTasks();
     }
 
 
 
     /**
      *
-     * @param mapTasks
-     * @param reduceTasks
+     * @param mapExecuteTasks
+     * @param reduceExecuteTasks
      */
-    private void distributeTasks(List<MapTask> mapTasks, List<ReduceTask> reduceTasks) {
+    private void distributeTasks(List<MapExecuteTask> mapExecuteTasks, List<ReduceExecuteTask> reduceExecuteTasks) {
         // 实现任务分配逻辑
     }
 
-    private void executeTasks() {
-        for (Worker worker : workers) {
-            worker.executeTasks();
-        }
+    private void startTaskManager() {
+
+    }
+
+    /**
+     * 更新Job状态
+     */
+    public void updateJobInfos(){
+
     }
 }

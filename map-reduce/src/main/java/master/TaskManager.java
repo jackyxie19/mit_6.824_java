@@ -2,32 +2,49 @@ package master;
 
 /**
  * 作业管理：
- * 1.
+ * 1.一个Job一个TaskManger
  */
 public class TaskManager {
 
-    void assignMapTask(){
+    private void assignMapTask(){
 
     }
 
-    void assignReduceTask(){
+    private void assignReduceTask(){
 
     }
 
-    void splitMapTask(){
+    private void splitMapTask(){
 
     }
 
-    void shuffle(){
+    private void shuffle(){
 
     }
 
-    void retryMapTask(){
+    private void retryMapTask(){
 
     }
 
-    void retryReduceTask(){
+    private void retryReduceTask(){
 
     }
 
+    private void destroy(){
+
+    }
+
+    /**
+     * JM更新信息调用
+     */
+    public void updateTaskInfo(WorkerInfo workerInfo){
+
+    }
+
+    /**
+     * 整个作业级别的Kill
+     */
+    public void jobKill(){
+
+    }
 }
