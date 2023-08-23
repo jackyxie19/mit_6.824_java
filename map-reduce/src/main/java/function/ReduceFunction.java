@@ -1,4 +1,6 @@
 package function;
 
-public class ReduceFunction {
+public abstract class ReduceFunction {
+
+    abstract void reduce();
 }

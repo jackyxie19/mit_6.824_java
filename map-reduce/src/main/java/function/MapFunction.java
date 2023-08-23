@@ -1,4 +1,6 @@
 package function;
 
-public class MapFunction {
+public abstract class MapFunction {
+
+    public abstract Object map();
 }

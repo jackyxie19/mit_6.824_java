@@ -1,6 +1,9 @@
 package master;
 
+import client.ClientRequest;
 import client.UDF;
+
+import java.util.List;
 
 /**
  * Master暴露对Client和对Worker的交互接口，内部与{@link ResourceManager}等交互的细节在此处屏蔽。
@@ -15,8 +18,18 @@ public class Master {
     /**
      * 开发给Client提交作业申请的接口
      */
-    public void submitJob(UDF udf){
+    public MasterResponse submitJob(ClientRequest clientRequest){
+        MasterResponse response = new MasterResponse();
+        Job job = new Job();
+        // 申请资源
+        List<WorkerInfo> workerInfos = resourceManager.applyResource();
+        job.setWorkerInfos(workerInfos);
+        job.setFileData(clientRequest.getFileData());
+        // 提交给JobManager
+        jobManager.submitJob(job);
+        // 返回回调给Client
 
+        return response;
     }
 
     /**
