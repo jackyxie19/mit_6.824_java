@@ -1,8 +1,10 @@
 package master;
 
 import tools.SnowflakeGenerator;
+import worker.HeartbeatMsg;
 import worker.Worker;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -19,6 +21,11 @@ public class TaskManager {
     Map<String, ReduceTask> idToReduceTask = new ConcurrentHashMap<>();
     ResourceManager resourceManager;
     List<String> workerIdList;
+    /**
+     * 记录每个Worker的已完成任务
+     */
+    private Map<String, List<String>> workerTasks = new HashMap<>();
+
     Job job;
     String jobId;
     SnowflakeGenerator snowflakeGenerator = new SnowflakeGenerator(200L);
@@ -82,6 +89,16 @@ public class TaskManager {
 
     private String assignWorker(){
         return workerIdList.get((int) (System.currentTimeMillis() % workerIdList.size()));
+    }
+
+    public void receiveHeartbeat(HeartbeatMsg heartbeatMessage) {
+        String workerId = heartbeatMessage.getNodeId();
+        List<String> completedMapTasks = heartbeatMessage.getCompletedMapTasks();
+
+        // 更新Worker的已完成任务列表
+        workerTasks.put(workerId, completedMapTasks);
+
+        // 在这里根据任务完成情况，可以判断是否需要调度Reduce任务
     }
 
     /**

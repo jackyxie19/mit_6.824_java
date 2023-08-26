@@ -3,6 +3,7 @@ package worker;
 import function.MapFunction;
 import master.MapTask;
 import master.ReduceTask;
+import master.TaskManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,11 +28,16 @@ public class Worker {
     private final List<ReduceTask> reduceExecuteTask = new ArrayList<>();
 
     private Map<String, String> mapIdToMapResult = new HashMap<>();
-
     ExecutorService mapExecutor = Executors.newSingleThreadExecutor();
     ExecutorService reduceExecutor = Executors.newSingleThreadExecutor();
-    private void heartbeatWithTaskInfo(){
 
+    TaskManager taskManager;
+    private void heartbeatWithTaskInfo(){
+        HeartbeatMsg heartbeatMsg = new HeartbeatMsg();
+        heartbeatMsg.setNodeId(nodeId);
+        List<String> completedMapTasks = new ArrayList<>(mapIdToMapResult.keySet());
+        heartbeatMsg.setCompletedMapTasks(completedMapTasks);
+        taskManager.receiveHeartbeat(heartbeatMsg);
     }
 
     private void executeMapTasks() {
