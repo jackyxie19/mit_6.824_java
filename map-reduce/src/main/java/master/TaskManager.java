@@ -80,7 +80,6 @@ public class TaskManager {
     private void assignMapTask(MapTask task) {
         Worker worker = resourceManager.getWorkerById(task.getWorkerId());
         worker.submitMapTask(task);
-
     }
 
     private void submitAllReduceTask() {

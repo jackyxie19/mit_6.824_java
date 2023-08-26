@@ -5,6 +5,8 @@ import function.MapFunction;
 import function.ReduceFunction;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import master.enums.JobStatus;
 import tools.SnowflakeGenerator;
 import worker.Worker;
@@ -21,6 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 2.Map任务的分发和Reduce的任务分发隔离开，一个是规整的64m的数据块，reduce的输入块是不确定的。而且分开处理更简单，也更符合单一职责原则。
  * 3.一个JobManager处理多个Job，而一个Job对应一个TaskManager。JM是常驻内存的工作线程，而TM是随作业生灭的实例，当后续也可以考虑把TM池化。
  */
+@Log4j2
 public class JobManager {
 
     SnowflakeGenerator snowflakeGenerator = new SnowflakeGenerator(100L);
@@ -42,6 +45,7 @@ public class JobManager {
         // 申请资源
 
         // 启动TM管理任务
+        log.info("job:{}", job);
         TaskManager taskManager = new TaskManager(job, jobRequest.getResourceManager());
         JobWithTaskManager jobWithTaskManager = new JobWithTaskManager();
         jobWithTaskManager.setJob(job);

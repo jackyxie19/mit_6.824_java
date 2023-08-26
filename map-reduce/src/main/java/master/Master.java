@@ -2,7 +2,8 @@ package master;
 
 import client.ClientRequest;
 import client.UDF;
-import com.sun.org.apache.regexp.internal.RE;
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import worker.Worker;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * JM管理者当前所有作业的执行状态，而TM管理具体任务的执行，RM负责计算资源的申请和放回。
  * 此处不区分Master的客户端和服务端，按理说Master对Client开放的不应该有Worker等调用的RPC。
  */
+@Log4j2
 public class Master {
 
     JobManager jobManager;
@@ -55,6 +57,7 @@ public class Master {
     public void heartbeatWithTaskInfo(WorkerInfo workerInfo){
         jobManager.updateJobInfos(workerInfo);
         resourceManager.updateInfo(workerInfo);
+        log.info("heartbeatWithTaskInfo:{}", workerInfo);
     }
 
     /**
