@@ -7,10 +7,12 @@ import java.util.List;
 @Data
 public class WorkerInfo {
     private String workerId;
-    private List<MapTask> finishedMapTasks;
-    private List<MapTask> runningMapTasks;
-    private List<MapTask> scheduledMapTasks;
-    private List<ReduceTask> finishedReduceTasks;
-    private List<ReduceTask> runningReduceTasks;
-    private List<ReduceTask> scheduledReduceTasks;
+    private List<MapTask> finishedMapTaskList;
+    private List<MapTask> runningMapTaskList;
+    private List<MapTask> receivedMapTaskList;
+    private List<ReduceTask> finishedReduceTaskList;
+    private List<ReduceTask> runningReduceTaskList;
+    private List<ReduceTask> receivedReduceTaskList;
+    private long generateMillis;
+    private long nonFinishedTaskNum;
 }

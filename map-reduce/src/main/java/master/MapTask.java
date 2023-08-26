@@ -8,7 +8,7 @@ public class MapTask {
     private String taskId;
     private String jobId;
     private String inputData;
-    private String inputLocation;
+//    private String inputLocation;
     private String resultLocation;
     private int status;
     private long submitMillis;

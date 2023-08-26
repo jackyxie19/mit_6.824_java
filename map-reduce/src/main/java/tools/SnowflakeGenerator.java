@@ -52,4 +52,10 @@ public class SnowflakeGenerator {
         }
         return currentTimestamp;
     }
+
+    public static void main(String[] args) {
+        System.out.println(MAX_MACHINE_ID);
+        System.out.println(0x3FF);
+        System.out.println(~(-1 << 11));
+    }
 }

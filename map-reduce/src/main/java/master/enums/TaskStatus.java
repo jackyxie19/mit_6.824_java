@@ -3,9 +3,9 @@ package master.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Getter
 @AllArgsConstructor
-public enum JobStatus {
+@Getter
+public enum TaskStatus {
     INITIALED(1),
     SUBMITTED(2),
     RUNNING(3),
