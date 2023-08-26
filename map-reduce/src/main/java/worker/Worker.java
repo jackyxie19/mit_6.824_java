@@ -10,6 +10,7 @@ import master.Master;
 import master.ReduceTask;
 import master.WorkerInfo;
 import tools.SnowflakeGenerator;
+import master.TaskManager;
 
 import java.util.*;
 import java.util.concurrent.*;
@@ -143,9 +144,19 @@ public class Worker {
             });
             result.add(submit);
         }
-
         return result;
     }
+
+    TaskManager taskManager;
+    private void heartbeatWithTaskInfo(){
+        HeartbeatMsg heartbeatMsg = new HeartbeatMsg();
+        heartbeatMsg.setNodeId(workerId);
+        List<String> completedMapTasks = new ArrayList<>(mapIdToMapResult.keySet());
+        heartbeatMsg.setCompletedMapTasks(completedMapTasks);
+        taskManager.receiveHeartbeat(heartbeatMsg);
+    }
+
+
 
     public Worker(Master master) {
         this();
