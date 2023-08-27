@@ -73,7 +73,11 @@ public class JobManager {
      * 更新Job状态
      */
     public void updateJobInfos(WorkerInfo workerInfo) {
-
+        // todo 暂时透传数据，后续应过滤单个job必要的数据再下传。
+        idMapJob.forEach((k,v)->{
+            TaskManager taskManager = v.getTaskManager();
+            taskManager.updateTaskInfo(workerInfo);
+        });
     }
 
     @Data

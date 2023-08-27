@@ -187,7 +187,7 @@ public class Worker {
 
                     for (String key : mapKeys) {
                         // 根据hash收集此reduce任务要处理的key集合
-                        if (key.hashCode() == task.getDesignatedKeyHash()) {
+                        if (key.hashCode() % 4 == task.getDesignatedKeyHash()) {
                             // 本任务处理的key
                             String value = mapResultJson.getString(key);
                             if (!mapKeyValues.containsKey(key)) {
@@ -206,6 +206,7 @@ public class Worker {
                     String aggregation = mapValues.get(0);
                     for (int i = 1; i < mapValues.size(); i++) {
                         String currentValue = mapValues.get(i);
+                        if (currentValue == null || currentValue.isEmpty()) continue;
                         aggregation = reduceFunction.reduce(key, aggregation, currentValue);
                     }
                     // 输出单个key最终结果

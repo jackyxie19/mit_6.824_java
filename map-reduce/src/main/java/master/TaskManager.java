@@ -2,6 +2,8 @@ package master;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import function.MapFunction;
+import function.ReduceFunction;
 import lombok.extern.log4j.Log4j2;
 import master.enums.TaskStatus;
 import tools.SnowflakeGenerator;
@@ -38,11 +40,14 @@ public class TaskManager {
     String jobId;
     final SnowflakeGenerator taskIdGenerator;
     final SnowflakeGenerator reduceIdGenerator;
-    int chunkSize = 64;
+    int chunkSize = 256;
     int taskSize;
 
     volatile boolean allMapDone = false;
     volatile boolean reduceTaskSubmitted = false;
+
+    private MapFunction mapFunction;
+    private ReduceFunction reduceFunction;
 
     public TaskManager(Job job, ResourceManager resourceManager) {
         this();
@@ -52,6 +57,8 @@ public class TaskManager {
         this.job = job;
         this.jobId = job.getJobId();
         workerIdList = job.getWorkerInfos().stream().map(WorkerInfo::getWorkerId).collect(Collectors.toList());
+        mapFunction = job.getMapFunction();
+        reduceFunction = job.getReduceFunction();
         submitAllMapTask();
 
         // 监听map任务是否全部完成
@@ -158,6 +165,7 @@ public class TaskManager {
             reduceTask.setDesignatedKeyHash(i);
             String workerId = assignWorker();
             reduceTask.setWorkerId(workerId);
+            reduceTask.setReduceFunction(reduceFunction);
             assignReduceTask(reduceTask);
             idToReduceTask.put(reduceTaskId, reduceTask);
 
@@ -199,15 +207,7 @@ public class TaskManager {
         return workerIdList.get((int) (System.currentTimeMillis() % workerIdList.size()));
     }
 
-    public void receiveHeartbeat(HeartbeatMsg heartbeatMessage) {
-        String workerId = heartbeatMessage.getNodeId();
-        List<String> completedMapTasks = heartbeatMessage.getCompletedMapTasks();
 
-        // 更新Worker的已完成任务列表
-        workerTasks.put(workerId, completedMapTasks);
-
-        // 在这里根据任务完成情况，可以判断是否需要调度Reduce任务
-    }
 
     /**
      * TODO
@@ -241,9 +241,23 @@ public class TaskManager {
      * JM更新信息调用，更新各worker节点上当前TM所属任务的状态。
      */
     public void updateTaskInfo(WorkerInfo workerInfo) {
-
+        // todo 需要判定任务是否是当前job的
+        workerInfo.getFinishedMapTaskList();
     }
 
+    /**
+     * todo 更新状态
+     * @param heartbeatMessage
+     */
+    public void receiveHeartbeat(HeartbeatMsg heartbeatMessage) {
+        String workerId = heartbeatMessage.getNodeId();
+        List<String> completedMapTasks = heartbeatMessage.getCompletedMapTasks();
+
+        // 更新Worker的已完成任务列表
+        workerTasks.put(workerId, completedMapTasks);
+
+        // 在这里根据任务完成情况，可以判断是否需要调度Reduce任务
+    }
     /**
      * 整个作业级别的Kill
      * TODO
