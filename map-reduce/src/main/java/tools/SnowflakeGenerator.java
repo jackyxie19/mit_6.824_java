@@ -23,6 +23,24 @@ public class SnowflakeGenerator {
         this.machineId = machineId;
     }
 
+    public synchronized String generateIdWithSpin() {
+        int maxTryTime = 100;
+        int start = 0;
+        while (start++ < maxTryTime) {
+            try {
+                return generateId();
+            } catch (Exception e) {
+                try {
+                    Thread.sleep(1L);
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        }
+        // 失败后最后尝试一次
+        return generateId();
+    }
+
     public synchronized String generateId() {
         long currentTimestamp = System.currentTimeMillis();
 

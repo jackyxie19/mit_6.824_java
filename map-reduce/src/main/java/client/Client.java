@@ -2,6 +2,7 @@ package client;
 
 import com.alibaba.fastjson.JSON;
 import function.MapFunction;
+import function.ReduceFunction;
 import master.Master;
 import master.MasterResponse;
 import org.apache.commons.lang3.StringUtils;
@@ -49,27 +50,42 @@ public class Client {
                 "This is our hope. This is the faith that I will go back to the South with. With this faith we will be able to hew out of the mountain of despair a stone of hope. With this faith we will be able to transform the jangling discords of our nation into a beautiful symphony of brotherhood. With this faith we will be able to work together, to pray together, to struggle together, to go to jail together, to stand up for freedom together, knowing that we will be free one day. And this will be the day, this will be the day when all of God's children will be able to sing with new meaning, \"My country 'tis of thee, sweet land of liberty, of thee I sing. Land where my fathers died, land of the Pilgrim's pride, from every mountainside, let freedom ring!\" And if America is to be a great nation, this must become true.";
         ClientRequest clientRequest = new ClientRequest();
         clientRequest.setFileData(iHaveADream);
-
         MapFunction rowWordCount = new MapFunction() {
             @Override
             public String map(String s) {
                 if (s == null) {
                     return "";
                 }
-                String[] split = s.split(" ");
-                Map<String,Integer> rowWordCount = new HashMap<>();
-                for (int i = 0; i < split.length; i++) {
-                    String word = split[i];
-                    String trimmed = word.trim();
-                    if (!rowWordCount.containsKey(trimmed)){
-                        rowWordCount.put(trimmed,0);
+                Map<String, Integer> rowWordCount = new HashMap<>();
+                String lineSeparator = System.lineSeparator();
+                String[] lines = s.split(lineSeparator);
+                for (String line : lines) {
+                    if (line == null) {
+                        continue;
                     }
-                    Integer preCount = rowWordCount.get(trimmed);
-                    rowWordCount.put(trimmed, ++preCount);
+                    String[] words = line.split(" ");
+                    for (String word : words) {
+                        String trimmed = word.trim();
+                        if (!rowWordCount.containsKey(trimmed)) {
+                            rowWordCount.put(trimmed, 0);
+                        }
+                        Integer preCount = rowWordCount.get(trimmed);
+                        rowWordCount.put(trimmed, ++preCount);
+                    }
                 }
+
                 return JSON.toJSONString(rowWordCount);
             }
         };
+        ReduceFunction reduceFunction = new ReduceFunction() {
+            @Override
+            public String reduce(String key, String v1, String v2) {
+                Integer i1 = Integer.valueOf(v1);
+                Integer i2 = Integer.valueOf(v2);
+                return String.valueOf(i1 + i2);
+            }
+        };
+        clientRequest.setReduceFunction(reduceFunction);
         clientRequest.setMapFunction(rowWordCount);
         Master master = new Master();
         MasterResponse masterResponse = master.submitJob(clientRequest);

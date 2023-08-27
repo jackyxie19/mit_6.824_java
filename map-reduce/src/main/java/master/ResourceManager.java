@@ -29,6 +29,15 @@ public class ResourceManager {
     }
 
     /**
+     * 通知worker网络结构
+     */
+    public void postInit() {
+        workerMap.forEach((workerId, worker) -> {
+            worker.postRegistered(workerMap);
+        });
+    }
+
+    /**
      * 任务执行前申请Worker
      * v0阶段返回恒定数量的worker节点
      */
@@ -63,7 +72,7 @@ public class ResourceManager {
             List<WorkerInfo> topNList = workerInfos.values().stream()
                     .sorted(Comparator.comparingLong(WorkerInfo::getNonFinishedTaskNum))
                     .collect(Collectors.toList())
-                    .subList(0,n);
+                    .subList(0, n);
             return topNList;
         }
     }

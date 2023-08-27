@@ -1,7 +1,8 @@
 package master;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import master.enums.TaskStatus;
 import tools.SnowflakeGenerator;
 import worker.HeartbeatMsg;
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
 
 @Log4j2
 public class TaskManager {
-
+    JSONObject properties;
     String fileData;
     Map<String, MapTask> idToMapTask = new ConcurrentHashMap<>();
     Map<String, ReduceTask> idToReduceTask = new ConcurrentHashMap<>();
@@ -35,9 +36,13 @@ public class TaskManager {
 
     Job job;
     String jobId;
-    SnowflakeGenerator snowflakeGenerator = new SnowflakeGenerator(200L);
+    final SnowflakeGenerator taskIdGenerator;
+    final SnowflakeGenerator reduceIdGenerator;
     int chunkSize = 64;
     int taskSize;
+
+    volatile boolean allMapDone = false;
+    volatile boolean reduceTaskSubmitted = false;
 
     public TaskManager(Job job, ResourceManager resourceManager) {
         this();
@@ -52,23 +57,69 @@ public class TaskManager {
         // 监听map任务是否全部完成
         new Thread(() -> {
             while (true) {
-                if (!isAllMapTaskDone()) {
+                if (allMapDone) {
+                    // 所有Map任务完成
+                    if (reduceTaskSubmitted) {
+                        // 已提交reduce作业，可跳出
+                        return;
+                    }
+                    // 提交作业
+                    submitAllReduceTask();
+                    reduceTaskSubmitted = true;
+                } else {
+                    // 继续监听map任务是否全部完成
+                    allMapDone = isAllMapTaskDone();
                     try {
                         Thread.sleep(2000L);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                } else {
-                    // start reduce task and stop
-                    submitAllReduceTask();
-                    return;
                 }
+            }
+        }).start();
+
+        // 启动线程监听ReduceTask状态
+        new Thread(() -> {
+            while (true) {
+                try {
+                    if (!reduceTaskSubmitted) {
+                        // 任务未提交，休眠后继续循环
+                        Thread.sleep(2000L);
+                        continue;
+                    }
+                    // 监听任务是否完成
+                    if (isAllReduceTaskDone()) {
+                        // 汇聚reduce结果并返回client
+                        Map<String,Object> reduceResult = new HashMap<>();
+                        idToReduceTask.forEach((reduceTaskId, reduceTask)->{
+                            String workerId = reduceTask.getWorkerId();
+                            Worker worker = resourceManager.getWorkerById(workerId);
+                            String reduceTaskResult = worker.loadReduceResultById(reduceTaskId);
+                            JSONObject jsonObject = JSON.parseObject(reduceTaskResult);
+                            reduceResult.putAll(jsonObject.getInnerMap());
+                        });
+                        log.info("jobId:{}, reduce result:{}",jobId,JSON.toJSON(reduceResult));
+                        // 处理完成，跳出
+                        // TODO 销毁TM，以及将结果落盘
+                        return;
+                    } else {
+                        // 再次检查Reduce任务是否完成
+                        Thread.sleep(2000L);
+                    }
+                } catch (Exception e) {
+                    log.error("监听Reduce任务状态异常", e);
+                }
+
             }
         }).start();
     }
 
-    public TaskManager() {
 
+    public TaskManager() {
+        // 对象实例标识
+        int objectLocal = this.hashCode() & 0x3FF;
+        taskIdGenerator = new SnowflakeGenerator(objectLocal - 1);
+        reduceIdGenerator = new SnowflakeGenerator(objectLocal - 2);
     }
 
 
@@ -83,14 +134,42 @@ public class TaskManager {
     }
 
     private void submitAllReduceTask() {
+        // 指定reduceTask数量、每个reduceTask负责的id范围，以及MapTaskId与ReduceTaskId的映射。
+        // 按workerId聚合MapTask
+        Map<String, List<MapTask>> workerIdToMapTasks = idToMapTask.values().stream().collect(Collectors.groupingBy(MapTask::getWorkerId));
+        List<MapTaskResultLocation> resultLocations = idToMapTask.values().stream().map(e -> {
+            String mapTaskId = e.getTaskId();
+            String workerId = e.getWorkerId();
+            MapTaskResultLocation resultLocation = new MapTaskResultLocation();
+            resultLocation.setMapTaskResultWorkerId(workerId);
+            resultLocation.setMapTaskId(mapTaskId);
+            return resultLocation;
+        }).collect(Collectors.toList());
+        int workerSize = workerIdList.size();
 
+        // TODO 此处暂时固定reduce数量为4.
+        int reduceTaskSize = 4;
+        for (int i = 0; i < reduceTaskSize; i++) {
+            ReduceTask reduceTask = new ReduceTask();
+            reduceTask.setJobId(jobId);
+            String reduceTaskId = reduceIdGenerator.generateIdWithSpin();
+            reduceTask.setTaskId(reduceTaskId);
+            reduceTask.setMapTaskResultLocations(resultLocations);
+            reduceTask.setDesignatedKeyHash(i);
+            String workerId = assignWorker();
+            reduceTask.setWorkerId(workerId);
+            assignReduceTask(reduceTask);
+            idToReduceTask.put(reduceTaskId, reduceTask);
+
+        }
     }
 
     /**
      * 提交reduce任务到worker节点，具体提交节点由TM决定
      */
     private void assignReduceTask(ReduceTask reduceTask) {
-
+        Worker worker = resourceManager.getWorkerById(reduceTask.getWorkerId());
+        worker.submitReduceTask(reduceTask);
     }
 
     /**
@@ -104,7 +183,7 @@ public class TaskManager {
             int rightIndex = Math.min(length, (i + 1) * chunkSize);
             String chunk = fileData.substring(i, rightIndex);
             MapTask mapTask = new MapTask();
-            mapTask.setTaskId(snowflakeGenerator.generateId());
+            mapTask.setTaskId(taskIdGenerator.generateIdWithSpin());
             mapTask.setJobId(jobId);
             mapTask.setWorkerId(assignWorker());
 //            mapTask.setInputLocation(chunk);
@@ -176,6 +255,7 @@ public class TaskManager {
     /**
      * Worker上运行着同Job的不同Task，所以Worker不感知Job对应的MapTask及ReduceTask是否完成。
      * 需要TaskManager判断单个作业的整体进程。
+     *
      * @return
      */
     private boolean isAllMapTaskDone() {
@@ -184,6 +264,17 @@ public class TaskManager {
             if (mapTask.getStatus() != TaskStatus.FINISHED.getCode()) {
                 return false;
             }
+        }
+        return true;
+    }
+
+    private boolean isAllReduceTaskDone() {
+        Collection<ReduceTask> reduceTasks = idToReduceTask.values();
+        for (ReduceTask reduceTask : reduceTasks) {
+            if (reduceTask.getStatus() != TaskStatus.FINISHED.getCode()) {
+                return false;
+            }
+
         }
         return true;
     }

@@ -27,7 +27,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class JobManager {
 
     SnowflakeGenerator snowflakeGenerator = new SnowflakeGenerator(100L);
-    private final List<Worker> workers = new ArrayList<>();
     Map<String, JobWithTaskManager> idMapJob = new ConcurrentHashMap<>();
 
     public void submitJob(JobRequest jobRequest) {

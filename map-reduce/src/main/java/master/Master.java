@@ -20,7 +20,7 @@ public class Master {
     JobManager jobManager;
     ResourceManager resourceManager;
 
-    public Master(){
+    public Master() {
         jobManager = new JobManager();
         resourceManager = new ResourceManager();
         for (int i = 0; i < 10; i++) {
@@ -29,12 +29,13 @@ public class Master {
             WorkerInfo workerInfo = worker.askForWorkerInfo();
             resourceManager.updateWorkerInfo(workerInfo);
         }
+        resourceManager.postInit();
     }
 
     /**
      * 开发给Client提交作业申请的接口
      */
-    public MasterResponse submitJob(ClientRequest clientRequest){
+    public MasterResponse submitJob(ClientRequest clientRequest) {
         MasterResponse response = new MasterResponse();
         JobManager.JobRequest job = new JobManager.JobRequest();
         // 申请资源
@@ -54,16 +55,16 @@ public class Master {
     /**
      * 接受Worker节点的心跳数据，在前期的设计中直接worker节点的状态信息随心跳传递。
      */
-    public void heartbeatWithTaskInfo(WorkerInfo workerInfo){
+    public void heartbeatWithTaskInfo(WorkerInfo workerInfo) {
         jobManager.updateJobInfos(workerInfo);
         resourceManager.updateInfo(workerInfo);
-        log.info("heartbeatWithTaskInfo:{}", workerInfo);
+        log.info("receive heartbeat from worker : {}", workerInfo);
     }
 
     /**
      * 开放给客户端的作业详情查询能力
      */
-    public void showJobProcedure(String jobId){
+    public void showJobProcedure(String jobId) {
 
     }
 
