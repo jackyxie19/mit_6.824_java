@@ -43,7 +43,25 @@ TODO：
 
 状态信息同步展示（client可观测）
 
+### 一阶段 TODO
 
+1. Map、Reduce的输出结果集需要进行联动
+2. Worker上的中间结果集需要考虑落盘，防止内存溢出。
+3. MapTask、ReduceTask将控制信息和数据信息分离
+4. Worker内存引用替换成rpc接口调用
+5. 增加Map、Reduce性能指标监控，对运行超时的进行重试？
+6. Client可查询任务运行状态，可感知异常。
+7. 多个作业调度管理
+8. 故障处理/容错
+   1. Master
+      1. checkpoint
+      2. Master重启后需要重新与Worker进行连接并获取任务信息
+      3. 从checkpoint开始重新下发任务到Worker，无需关注Worker之前执行的任务。
+   2. Worker
+      1. 将故障的 Worker从资源列表当中移除
+      2. 将未完成的Job在该节点上的任务分配到其他Worker上执行
+9. Combiner函数
+10. 分区函数
 
 # 模块划分：
 
