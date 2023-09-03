@@ -1,8 +1,6 @@
 package function;
 
-public abstract class ReduceFunction<K,V> {
+public abstract class ReduceFunction {
 
-   public abstract KeyValuePair<K,V> reduce(KeyValuePair<K,V> reduceOne, KeyValuePair<K,V> other);
-
-   abstract KeyValuePair<K,V> getSum();
+   public abstract String reduce(String key, String v1, String v2);
 }
