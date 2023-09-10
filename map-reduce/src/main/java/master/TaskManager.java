@@ -34,7 +34,7 @@ public class TaskManager {
     /**
      * 记录每个Worker的已完成任务
      */
-    private Map<String, List<String>> workerTasks = new HashMap<>();
+    private final Map<String, List<String>> workerTasks = new HashMap<>();
 
     Job job;
     String jobId;
@@ -76,6 +76,11 @@ public class TaskManager {
                 } else {
                     // 继续监听map任务是否全部完成
                     allMapDone = isAllMapTaskDone();
+                    // TODO 超时map任务检测及提交
+                    Map<String, MapTask> timeoutMapTasks = listTimeoutMapTasks();
+                    timeoutMapTasks.forEach((id,mapTask)->{
+                        
+                    });
                     try {
                         Thread.sleep(2000L);
                     } catch (InterruptedException e) {
@@ -111,6 +116,8 @@ public class TaskManager {
                         return;
                     } else {
                         // 再次检查Reduce任务是否完成
+                        // todo 检测超时reduce任务并提交
+                        Map<String, ReduceTask> stringReduceTaskMap = listTimeoutReduceTasks();
                         Thread.sleep(2000L);
                     }
                 } catch (Exception e) {
@@ -293,4 +300,13 @@ public class TaskManager {
         return true;
     }
 
+    private Map<String ,MapTask> listTimeoutMapTasks(){
+        // TODO
+        return null;
+    }
+
+    private Map<String ,ReduceTask> listTimeoutReduceTasks(){
+        // TODO
+        return null;
+    }
 }

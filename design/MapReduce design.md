@@ -47,6 +47,8 @@ TODO：
 
 1. Map、Reduce的输出结果集需要进行联动
 2. Worker上的中间结果集需要考虑落盘，防止内存溢出。
+   1. 路径拼接：workerId/taskType/taskId
+
 3. MapTask、ReduceTask将控制信息和数据信息分离
 4. Worker内存引用替换成rpc接口调用
 5. 增加Map、Reduce性能指标监控，对运行超时的进行重试？
@@ -54,7 +56,7 @@ TODO：
 7. 多个作业调度管理
 8. 故障处理/容错
    1. Master
-      1. checkpoint
+      1. checkpoint，保存TM、RM、JM中的元数据信息。
       2. Master重启后需要重新与Worker进行连接并获取任务信息
       3. 从checkpoint开始重新下发任务到Worker，无需关注Worker之前执行的任务。
    2. Worker

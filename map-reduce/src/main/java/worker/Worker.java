@@ -28,6 +28,9 @@ public class Worker {
     public static final long MAP_TASK_EXECUTE_PERIOD = 1000L;
     public static final long REDUCE_TASK_EXECUTE_PERIOD = 1000L;
     private final Map<String, Worker> workerIdMap = new HashMap<>();
+
+    private MapResultManager mapResultManager;
+    private ReduceResultManager reduceResultManager;
     private Master master;
     /**
      * Worker的唯一标识id
@@ -148,9 +151,8 @@ public class Worker {
                 mapTaskResult.setResult(mapResult);
                 mapTaskResult.setMapTask(task);
 
-                // store to local, using memory instead of local disk
-                mapIdToMapResult.put(mapTaskId, mapTaskResult.getResult());
-
+                // store to local file system
+                mapResultManager.write(mapTaskId, mapTaskResult.getResult());
                 mapTaskResult.getMapTask().setStatus(TaskStatus.FINISHED.getCode());
                 log.info("map task id : {}, result : {}", mapTaskId, mapTaskResult.getResult());
 
@@ -245,12 +247,14 @@ public class Worker {
     }
 
     public Worker() {
+        mapResultManager = new MapResultManager(this);
+        reduceResultManager = new ReduceResultManager(this);
         Random random = new Random();
         int randomInt = random.nextInt();
         int low10 = ~(-1 << 10);
         randomInt = randomInt & low10;
         workerId = new SnowflakeGenerator(randomInt).generateIdWithSpin();
-        String lineSeparator = System.getProperty("line.separator");
+
         // map任务定时执行
         new Thread(() -> {
             while (true) {
@@ -466,7 +470,9 @@ public class Worker {
             throw new MissingMapResultException("查询mapId不在本节点上, mapTaskId: " + mapTaskId + "; workerId: " + getWorkerId());
         }
         // TODO 先尝试从内存加载结果，如果内存中没有再尝试从磁盘中加载结果
-        return mapIdToMapResult.get(mapTaskId);
+//        return mapIdToMapResult.get(mapTaskId);
+        String read = mapResultManager.read(mapTaskId);
+        return read;
     }
 
     /**
@@ -483,7 +489,8 @@ public class Worker {
             throw new MissingMapResultException("查询mapId不在本节点上, reduceTaskId: " + reduceTaskId + "; workerId: " + getWorkerId());
         }
         // TODO 先尝试从内存加载结果，如果内存中没有再尝试从磁盘中加载结果
-        return reduceIdToReduceResult.get(reduceTaskId);
+//        return reduceIdToReduceResult.get(reduceTaskId);
+        return reduceResultManager.read(reduceTaskId);
     }
 
 

@@ -4,10 +4,10 @@ public interface FileReadWrite {
     /**
      * 将map/reduce结果写入磁盘
      */
-    void write();
+    void write(String path, String data);
 
     /**
      * 读取map/reduce输入
      */
-    void read(String id);
+    String read(String path);
 }

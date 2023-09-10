@@ -4,10 +4,10 @@ import function.MapFunction;
 import lombok.Data;
 
 @Data
-public class MapTask {
+public class MapTaskInfo {
     private String taskId;
     private String jobId;
-    private String inputData;
+
     private String inputLocation;
     private String resultLocation;
     private int status;

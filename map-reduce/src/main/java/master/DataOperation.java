@@ -1,6 +1,6 @@
 package master;
 
 public interface DataOperation {
-    void read();
+    String read(String path);
     void write();
 }
