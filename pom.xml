@@ -13,6 +13,7 @@
 
     <modules>
         <module>map-reduce</module>
+        <module>gfs</module>
 
         <!-- 添加其他子模块 -->
     </modules>
