@@ -50,6 +50,10 @@ Master与ChunkServer间的注册与监听
 
 shadow：类似mysql的主从概念，master负责写入，shadow响应读取；在Master失效时通过Shadow接替？
 
+# 思路
+
+​	在罗列出要实现的功能时，先根据物理节点区分划出Master、ChunkServer、Client三大类角色，其中与Master关联的角色有Shadow，与ChunkServer关联的有Primary和Secondary。因此有了代码的基础包结构，base、master、chunkserver、client。根据论文中角色提到的功能在对应包下创建接口，如Master中的NamespaceManager接口管理Master中的元数据。在一开始不确定交互的数据结构，可使用范型<Namespce>标记方法交互类型，在具体实现时决定数据结构。
+
 # 概要
 
 最上层的节点有三类，分别是Master、ChunkServer、Client，其中ChunkServer从是否拥有租约可细分为Primary和Secondary。
