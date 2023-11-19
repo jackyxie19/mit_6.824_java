@@ -1,0 +1,106 @@
+<mxfile host="Electron" modified="2023-11-19T07:28:45.080Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="Z9ythtQKgT6tl4xyqiHy" version="21.6.8" type="device">
+  <diagram name="复制状态机架构" id="36-sRZU2Oon6Z9I5BCmy">
+    <mxGraphModel dx="978" dy="571" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XILATU9TXwlgehQ02d3j-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="117" y="255" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="127" y="265" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-4" value="客户端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="137" y="275" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-5" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-6" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+          <mxGeometry x="330" y="210" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-7" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-29" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.022;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="276" y="283" />
+              <mxPoint x="276" y="403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-30" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.886;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="283" />
+              <mxPoint x="300" y="377" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-9" value="共识模块" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-33" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-10" target="XILATU9TXwlgehQ02d3j-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-10" value="日志" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="370" y="350" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-11" value="X←3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="384" y="380" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-12" value="Y←1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="434" y="380" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-13" value="Y←9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="484" y="380" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-14" value="..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="534" y="380" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-16" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="587" y="400" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-20" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="587" y="394" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-21" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="587" y="388" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-23" value="状态机" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="510" y="230" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-24" value="X：3&lt;br&gt;Y：9&lt;br&gt;Z：0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="540" y="260" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-4" target="XILATU9TXwlgehQ02d3j-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="313" y="250" />
+              <mxPoint x="313" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-26" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="281" y="260" width="19" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-28" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="404" y="323" width="19" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-31" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="279" y="325" width="19" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-34" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="592.5" y="335" width="19" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="XILATU9TXwlgehQ02d3j-35" value="图1：复制状态机架构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="304" y="448" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
