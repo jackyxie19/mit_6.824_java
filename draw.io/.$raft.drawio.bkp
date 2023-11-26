@@ -1,31 +1,31 @@
-<mxfile host="Electron" modified="2023-11-19T07:28:45.080Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="Z9ythtQKgT6tl4xyqiHy" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2023-11-22T15:36:50.659Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="Ik1xHhgaet68Viq0wSdx" version="21.6.8" type="device" pages="2">
   <diagram name="复制状态机架构" id="36-sRZU2Oon6Z9I5BCmy">
-    <mxGraphModel dx="978" dy="571" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+    <mxGraphModel dx="1096" dy="814" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="XILATU9TXwlgehQ02d3j-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="117" y="255" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="127" y="265" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-4" value="客户端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-4" value="客户端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="137" y="275" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-5" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-5" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" parent="1" vertex="1">
           <mxGeometry x="320" y="200" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-6" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-6" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" parent="1" vertex="1">
           <mxGeometry x="330" y="210" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-7" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-7" value="&amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; 服务端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=left;horizontal=1;textDirection=ltr;" parent="1" vertex="1">
           <mxGeometry x="340" y="220" width="300" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-10">
+        <mxCell id="XILATU9TXwlgehQ02d3j-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-29" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.022;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-6">
+        <mxCell id="XILATU9TXwlgehQ02d3j-29" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.022;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="276" y="283" />
@@ -33,7 +33,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-30" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.886;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-5">
+        <mxCell id="XILATU9TXwlgehQ02d3j-30" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.886;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" parent="1" source="XILATU9TXwlgehQ02d3j-9" target="XILATU9TXwlgehQ02d3j-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="300" y="283" />
@@ -41,43 +41,43 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-9" value="共识模块" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-9" value="共识模块" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="370" y="260" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-33" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-10" target="XILATU9TXwlgehQ02d3j-23">
+        <mxCell id="XILATU9TXwlgehQ02d3j-33" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="XILATU9TXwlgehQ02d3j-10" target="XILATU9TXwlgehQ02d3j-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-10" value="日志" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-10" value="日志" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="370" y="350" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-11" value="X←3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-11" value="X←3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="384" y="380" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-12" value="Y←1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-12" value="Y←1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="434" y="380" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-13" value="Y←9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-13" value="Y←9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="484" y="380" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-14" value="..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-14" value="..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="534" y="380" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-16" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-16" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="587" y="400" width="30" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-20" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-20" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="587" y="394" width="30" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-21" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-21" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="587" y="388" width="30" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-23" value="状态机" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-23" value="状态机" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="510" y="230" width="110" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-24" value="X：3&lt;br&gt;Y：9&lt;br&gt;Z：0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-24" value="X：3&lt;br&gt;Y：9&lt;br&gt;Z：0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="540" y="260" width="50" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XILATU9TXwlgehQ02d3j-4" target="XILATU9TXwlgehQ02d3j-9">
+        <mxCell id="XILATU9TXwlgehQ02d3j-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="XILATU9TXwlgehQ02d3j-4" target="XILATU9TXwlgehQ02d3j-9" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="313" y="250" />
@@ -85,20 +85,214 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-26" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-26" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="281" y="260" width="19" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-28" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-28" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="404" y="323" width="19" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-31" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-31" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="279" y="325" width="19" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-34" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-34" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="592.5" y="335" width="19" height="19" as="geometry" />
         </mxCell>
-        <mxCell id="XILATU9TXwlgehQ02d3j-35" value="图1：复制状态机架构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="XILATU9TXwlgehQ02d3j-35" value="图1：复制状态机架构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" parent="1" vertex="1">
           <mxGeometry x="304" y="448" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Ac9tt9ju4H3rauoFXoIk" name="state">
+    <mxGraphModel dx="1420" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F7jCl3piRas6oP6cL2TG-1" value="State" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="570" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-2" value="currentTerm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-3" value="服务器当前最新条目，首次启动时初始化为0并单调递增。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="60" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-4" value="voteFor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-5" value="本期收到投票的候选者Id。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="90" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-6" value="log[]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="120" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-7" value="日志条目；每条日志记录了用于状态机的命令、以及领导者收到条目时的term。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="120" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-8" value="所有服务器上的持久化状态：发送RPC请求前持久化到稳定存储" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="30" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-9" value="所有机器上的临时状态" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="150" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-10" value="commitIndex" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="180" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-11" value="已提交日志的最大索引（初始为0，单调递增）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="180" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-12" value="lastApplied" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="210" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-13" value="状态机已应用日志的最大索引（初始为0，单调递增）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="210" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-14" value="领导者上的临时状态：选举后重新初始化" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="240" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-15" value="nextIndex[]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="270" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-16" value="即将发送到该服务器的下一个日志条目的索引（初始化为领导者最新日志索引+1）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="270" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-17" value="matchIndex[]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="20" y="300" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-18" value="已知目标服务器上复制的最高日志条目的索引（初始化为0，单调递增）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-1">
+          <mxGeometry x="120" y="300" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-20" value="RequestVote RPC候选者投票PRC请求" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="660" y="150" width="360" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-21" value="term" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-22" value="候选者条目" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-23" value="candidateId" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-24" value="投票候选者Id" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-25" value="lastLogIndex" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="120" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-26" value="候选者最新日志条目索引" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="120" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-27" value="参数" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="30" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-28" value="响应体" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-29" value="term" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="210" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-30" value="currentTerm，用于候选者更新自身" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="210" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-31" value="voteGranted" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="240" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-32" value="true为收到投票" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-33" value="接收者实现" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="270" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-38" value="lastLogTerm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="150" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-39" value="候选者最新日志条目" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="120" y="150" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-40" value="1. 如果term &amp;lt; currentTerm 返回false。&lt;br&gt;2. 如果votedFor或者candidatedId是null，并且候选者日志&lt;br&gt;与接受者日志一样新，则同一投票" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-20">
+          <mxGeometry x="20" y="300" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-41" value="AppendEntries RPC 领导者触发以复制日志条目，同时用于心跳机制" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="520" width="430" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-42" value="term" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-43" value="领导者的条目" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="60" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-44" value="leaderId" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-45" value="领导者Id，跟随者可以返回给客户端" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="90" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-46" value="prevLogIndex" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="120" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-47" value="最新日志条目的前一条索引" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="120" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-48" value="参数" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="30" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-49" value="响应体" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-50" value="term" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="280" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-51" value="currentTerm，用于领导者更新自身" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="280" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-52" value="success" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="310" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-53" value="true：如果跟随者包含prevLogIndex和prevLogTerm" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="310" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-54" value="接收者实现" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="350" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-56" value="1. 如果term &amp;lt; currentTerm，返回false&lt;br&gt;2. 如果日志不包含prevLogIndex的条目，返回false&lt;br&gt;3. 如果现存条目与新条目冲突（相同索引不同term），&lt;br&gt;&amp;nbsp; &amp;nbsp; 删除历史条目及其以后的条目&lt;br&gt;4. 将本地日志中不存在的新条目尾部追加&lt;br&gt;5. 如果leaderCommit &amp;gt; commitIndex，&lt;br&gt;&amp;nbsp; &amp;nbsp; 将commitIndex设置为leaderCommit和日志中最新索引的最小值" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="380" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-59" value="prevLogTerm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="150" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-60" value="preLogIndex日志条目的term" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="150" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-61" value="entries[]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="180" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-62" value="存放的日志条目（心跳信息为空，可一次发送多个）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="180" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-63" value="leaderCommit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="20" y="210" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-64" value="领导者的commitIndex" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-41">
+          <mxGeometry x="120" y="210" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-66" value="Rules for Servers" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="520" width="510" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-88" value="&lt;div&gt;所有服务器&lt;/div&gt;&lt;ul&gt;&lt;li&gt;如果 commitIndex &amp;gt; lastApplied，增加lastApplied，&lt;br&gt;将log[lastApplied]应用到状态机（5.3节）&lt;/li&gt;&lt;li&gt;如果RPC请求或相应包含term T &amp;gt; currentTerm，&lt;br&gt;则令currentTerm = T，并将其角色转变为跟随者（5.1节）&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-66">
+          <mxGeometry x="20" y="30" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-89" value="&lt;div&gt;跟随者（5.2节）&lt;/div&gt;&lt;ul&gt;&lt;li&gt;响应来自候选者和领导者的RPC请求&lt;/li&gt;&lt;li&gt;在选举超时时，没有收到来自当前领导者的最新日志RPC&lt;br&gt;，或者没有授予其他候选者投票，则将自身转变为候选者&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-66">
+          <mxGeometry x="20" y="120" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-90" value="&lt;div&gt;候选者（5.2节）&lt;/div&gt;&lt;ul&gt;&lt;li&gt;转变角色为候选者，开始选举：&lt;/li&gt;&lt;ul&gt;&lt;li&gt;增加currentTerm&lt;/li&gt;&lt;li&gt;为自己投票&lt;/li&gt;&lt;li&gt;重置选举计时器&lt;/li&gt;&lt;li&gt;向其他服务器发送RequestVote的RPC请求&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;如果收到多数服务器投票，则成为领导者&lt;/li&gt;&lt;li&gt;如果收到新领导者的日志追加RPC，则成为跟随者&lt;/li&gt;&lt;li&gt;如果选举超时，则开始新一轮的选举&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-66">
+          <mxGeometry x="20" y="200" width="330" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-91" value="&lt;div&gt;领导者&lt;/div&gt;&lt;ul&gt;&lt;li&gt;选举时：向所有服务器发送空日志的心跳；空闲周期重试防止选举超时（5.2节）&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;如果收到客户端命令：将条目追加到本地日志，在应用与状态机后响应（5.3节）&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;如果lastLogIndex ≥ nextIndx（跟随者）：发送给跟随者nextIndex后的日志条目&lt;/li&gt;&lt;ul&gt;&lt;li&gt;如果成功：更新跟随者的nextIndex和matchIndex（5.3节）&lt;/li&gt;&lt;li&gt;如果失败（日志不一致）：减少nextIndex并重试（5.3节）&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;如果存在N &amp;gt; commitIndex，多数机器上matchIndex[i] ≥ N，并且&lt;br&gt;log[N].term == currentTerm：则令 commitIndex = N（5.3、5.4节）&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="F7jCl3piRas6oP6cL2TG-66">
+          <mxGeometry x="20" y="360" width="490" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="F7jCl3piRas6oP6cL2TG-92" value="图2.&amp;nbsp;Raft 共识算法的摘要，不包括成员资格变更和日志压缩。" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1050" width="350" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
